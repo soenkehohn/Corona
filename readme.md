@@ -135,3 +135,15 @@ numbers still rise.
   <img src="./figures/Corona_Bremen_DZ0_update_22042020.png" width="500">
 </p>
 
+
+# Update 28.04.2020
+New cases at a refugee home led to a pronounced increase in case numbers. At the 
+same time infections at a home for elderly people led to more deaths. Opposingly 
+to the declining trend in whole Germany, case numbers in Bremen seem to be still 
+on the rise.
+
+<p align="center">
+  <img src="./figures/Corona_Bremen_27042020_largerfont.png" width="500">
+</p>
+
+# Corona
