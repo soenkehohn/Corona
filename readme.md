@@ -143,7 +143,7 @@ to the declining trend in whole Germany, case numbers in Bremen seem to be still
 on the rise.
 
 <p align="center">
-  <img src="./figures/Corona_Bremen_27042020_largerfont.png" width="500">
+  <img src="./figures/Corona_Bremen_27042020_largerfont.pdf" width="500">
 </p>
 
 # Corona
