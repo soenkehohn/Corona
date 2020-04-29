@@ -27,7 +27,7 @@ d= 0.010615 * 1.0/360.0 # death rate of healthy individuals (per year)
 # parameters: unconstrained
 # infection dynamics:
 a= 0.03 # probability that the disease is transmitted upon contact
-c= 7.60/P # contact rate per susceptible individual
+c= 7.60 # contact rate per susceptible individual
 
 # recovery and mortality
 #delta= 0.033 # death rate of infected individuals # based on Chinese data
@@ -50,6 +50,7 @@ R=np.zeros(tmax)
 D=np.zeros(tmax)
 time=np.arange(0,tmax,1)
 DDt=np.zeros(tmax-1)
+Rnull=np.zeros(tmax-1)
 
 
 S[0]=P
@@ -59,20 +60,20 @@ R[0]=0.0
 for i in range(tmax-1):
     # stepwise changes of parameter values due to changing human behaviour according to political restrictions
     if i>59:
-        c= 3.3/P
+        c= 3.3
         if i>67:
-            c=1.7/P
+            c=1.7
             delta=0.0025
             if i>74:
-                c=1.10/P
+                c=1.10
                 if i>82:
-                    c=0.7/P
+                    c=0.7
             
     # susceptible fraction of population
-    #dSdt=theta*S[i]+b*S[i]-d*S[i] - a*c*S[i]*I[i] + sigma*R[i]
-    dSdt= sigma*R[i] - a*c*S[i]*I[i] # I switched off birth, migration, and natural mortality because we look at a short time intrval for the time being
+    #dSdt=theta*S[i]+b*S[i]-d*S[i] - a*c*S[i]*I[i]/P + sigma*R[i]
+    dSdt= sigma*R[i] - a*c*S[i]*I[i]/P # I switched off birth, migration, and natural mortality because we look at a short time intrval for the time being
     # infected fraction of population
-    dIdt=a*c*S[i]*I[i] - delta*I[i] - rho*I[i]
+    dIdt=a*c*S[i]*I[i]/P - delta*I[i] - rho*I[i]
     # recovered fraction of population
     dRdt=rho*I[i] - sigma*R[i] - d*R[i]
     
@@ -82,7 +83,7 @@ for i in range(tmax-1):
     D[i+1]=D[i]+delta*I[i]*dt
     
     DDt[i]=np.log(2.0)/np.log(1.0+a*c*S[i]) # is this the correct equation for doubling time?
-    
+    Rnull[i]=(a*c)/(rho)
 
 print 'total fatalities=', D[tmax-1]
 
@@ -112,6 +113,14 @@ plt.legend(loc=2)
 
 plt.figure(3)
 plt.plot(DDt,'b',label='Growth factor') # Verdopplungszeit
+
+
+plt.figure(4)
+plt.plot(Rnull,'b',label='R0')
+plt.xlabel('days after 28th of January')
+plt.ylabel('days')
+plt.legend(loc=1)
+plt.title('Covid Model for Germany (assuming 0% unreported cases)')
 
 
 plt.show()

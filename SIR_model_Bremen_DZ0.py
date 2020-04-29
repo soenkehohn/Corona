@@ -43,7 +43,7 @@ d= 0.010615 * 1.0/360.0 # death rate of healthy individuals (per year)
 # parameters: unconstrained
 # infection dynamics:
 a= 0.03 # probability that the disease is transmitted upon contact
-c= 4.70/P # contact rate per susceptible individual
+c= 4.70 # contact rate per susceptible individual
 
 # recovery and mortality
 #delta= 0.033 # death rate of infected individuals # based on Chinese data
@@ -65,6 +65,7 @@ R=np.zeros(tmax)
 D=np.zeros(tmax)
 time=np.arange(0,tmax,1)
 DDt=np.zeros(tmax-1)
+Rnull=np.zeros(tmax-1)
 
 
 S[0]=P
@@ -74,21 +75,21 @@ R[0]=0.0
 for i in range(tmax-1):
     # manual adjustment of parameter values due to changing human behaviour according to political restrictions or improved therapy
     if i>15:
-        c=2.0/P
+        c=2.0
         if i>20:
             rho=0.05
             if i>24:
                 delta= 0.005 # this increase in mortality is due to an incident of clustered infections in a special-care home for elderly people
                 if i>35:
-                    c=2.5/P # this was only an artefact from Easter?
+                    c=2.5 # this was only an artefact from Easter?
                     #rho=0.03
                     #if i>50: #for future scenarios
-                        #c=2.2/P
+                        #c=2.2
     
     # susceptible fraction of population
-    dSdt=theta*S[i]+b*S[i]-d*S[i] - a*c*S[i]*I[i] + sigma*R[i]
+    dSdt=theta*S[i]+b*S[i]-d*S[i] - a*c*S[i]*I[i]/P + sigma*R[i]
     # infected fraction of population
-    dIdt=a*c*S[i]*I[i] - delta*I[i] - rho*I[i]
+    dIdt=a*c*S[i]*I[i]/P - delta*I[i] - rho*I[i]
     # recovered fraction of population
     dRdt=rho*I[i] - sigma*R[i] - d*R[i]
     
@@ -98,6 +99,7 @@ for i in range(tmax-1):
     D[i+1]=D[i]+delta*I[i]*dt
     
     DDt[i]=np.log(2.0)/np.log(1.0+a*c*S[i])
+    Rnull[i]=(a*c)/(rho)
     
 
 print 'total fatalities=', D[tmax-1]
@@ -142,7 +144,15 @@ plt.figure(3)
 plt.plot(DDt,'b',label='doubling time')
 plt.xlabel('days after 11th of March')
 plt.ylabel('days')
-plt.legend(loc=2)
+plt.legend(loc=1)
+
+
+plt.figure(4)
+plt.plot(Rnull,'b',label='R0')
+plt.xlabel('days after 11th of March')
+plt.ylabel('days')
+plt.legend(loc=1)
+plt.title('Covid Model for Bremen plus surrounding (assuming 0\% unreported cases)')
 
 
 print 'Verdoppelungszeit=',DDt[7]

@@ -150,3 +150,20 @@ on the rise.
   <img src="./figures/Corona_Germany_29042020.png" width="500">
 </p>
 
+# Update 30.04.2020
+The basic reproduction number, R0, apparently represents an important parameter 
+that is used to estimate whether or not an infectious disease is going to develop 
+into an epidemic or if it is going to die out. This number is not a direct parameter 
+in the model but can be calculated from the parameters used in the model. I 
+adjusted the formulation of the contact rate c in order to enable calculation of 
+R0 as a model diagnostic. The change in R0 over time is shown for the entire 
+German population as well as for the federal state of Bremen.
+
+<p align="center">
+  <img src="./figures/R0_Germany_30042020.png" width="500">
+</p>
+
+<p align="center">
+  <img src="./figures/R0_Bremen_30042020.png" width="500">
+</p>
+
