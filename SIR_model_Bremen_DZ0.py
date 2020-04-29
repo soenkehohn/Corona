@@ -162,5 +162,7 @@ print 'Verdoppelungszeit=',DDt[tmax-2]
 print np.max(I)*0.0013
 print np.max(I)*0.0002
 
+print 'R0 =', (a*c)/(rho)
+
 plt.show()
 

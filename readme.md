@@ -146,4 +146,9 @@ on the rise.
   <img src="./figures/Corona_Bremen_28042020.png" width="500">
 </p>
 
+<p align="center">
+  <img src="./figures/Corona_Germany_28042020.png" width="500">
+</p>
+
+
 # Corona
