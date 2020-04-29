@@ -160,10 +160,10 @@ R0 as a model diagnostic. The change in R0 over time is shown for the entire
 German population as well as for the federal state of Bremen.
 
 <p align="center">
-  <img src="./figures/R0_Germany_30042020.png" width="500">
+  <img src="./figures/R0_Germany_29042020.png" width="500">
 </p>
 
 <p align="center">
-  <img src="./figures/R0_Bremen_30042020.png" width="500">
+  <img src="./figures/R0_Bremen_29042020.png" width="500">
 </p>
 
