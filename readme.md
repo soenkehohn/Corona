@@ -150,5 +150,3 @@ on the rise.
   <img src="./figures/Corona_Germany_29042020.png" width="500">
 </p>
 
-
-# Corona
