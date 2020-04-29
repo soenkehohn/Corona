@@ -152,7 +152,7 @@ plt.plot(Rnull,'b',label='R0')
 plt.xlabel('days after 11th of March')
 plt.ylabel('days')
 plt.legend(loc=1)
-plt.title('Covid Model for Bremen plus surrounding (assuming 0\% unreported cases)')
+plt.title('Covid Model for Bremen (assuming 0% unreported cases)')
 
 
 print 'Verdoppelungszeit=',DDt[7]
