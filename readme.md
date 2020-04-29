@@ -147,7 +147,7 @@ on the rise.
 </p>
 
 <p align="center">
-  <img src="./figures/Corona_Germany_28042020.png" width="500">
+  <img src="./figures/Corona_Germany_29042020.png" width="500">
 </p>
 
 
