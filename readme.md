@@ -188,4 +188,20 @@ The model for Bremen still predicts an increase of active infections, which is c
   <img src="./figures/Bremen_15052020_SZ.png" width="500">
 </p>
 
+# Update 28.10.2020
+The Corona virus outbreak in Germany at the beginning of the year 2020 showed extremely 
+fast spreading of the virus, which, in retrospect, I interprete as the spreading of the 
+testing activity and not necessarily the spreading of the virus itself. This may at least explain the very 
+fast increase of cases as observed in the data. The second wave probably allows to better 
+constrain the dynamics of the virus because the testing baseline is well established and 
+we truly observe a relative increase in positive tests in relation to negative test results. 
+At the beginning of the year, there was probably a bias towards more severe cases and 
+therefore a higher relative fraction of positive tests relative to total tests.
 
+The current situation in Bremen as of 28.10.2020 shows well above 100 cases per 100.000 citizens. 
+I will now again take a closer look at the development in order to estimate the expected pressure 
+on the Bremen healthcare system.
+
+<p align="center">
+  <img src="./Fig1_28102020.png" width="500">
+</p>
