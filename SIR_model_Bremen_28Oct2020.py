@@ -50,7 +50,7 @@ d= 0.010615 * 1.0/360.0 # death rate of healthy individuals (per year)
 
 # parameters: unconstrained
 # infection dynamics:
-a= 0.03 # probability that the disease is transmitted upon contact
+a= 0.031 # probability that the disease is transmitted upon contact
 c= 3.0 # contact rate per susceptible individual
 
 # recovery and mortality
@@ -64,7 +64,7 @@ rho= 0.04 # recovery rate for infected individuals
 sigma= 0.0 # rate of recovered individuals that become susceptible for reinfection
 
 # initialization
-tmax=20 # change duration of simulation to switch between parameter adjustment on the timescale of available data and future predictions for an entire year
+tmax=30 # change duration of simulation to switch between parameter adjustment on the timescale of available data and future predictions for an entire year
 #tmax=365
 dt=1.0
 

@@ -205,3 +205,13 @@ on the Bremen healthcare system.
 <p align="center">
   <img src="./Fig1_28102020.png" width="500">
 </p>
+
+# Update 04.11.2020
+Cases keep rising. Authorities are overwhelmed with backtracing, so basically the virus is out of control.
+Number of intensive care patients are increasing and local hospitals in Bremen are approaching their capacities.
+The Bremen Senate and German Gouvernment have announced a partial lockdown at the beginning of the week. First 
+effects of this expected change in peoples behaviour cannot be expected before in about 10 days.
+
+<p align="center">
+  <img src="./Fig1_04112020.png" width="500">
+</p>
