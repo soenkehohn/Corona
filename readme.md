@@ -215,3 +215,15 @@ effects of this expected change in peoples behaviour cannot be expected before i
 <p align="center">
   <img src="./Fig1_04112020.png" width="500">
 </p>
+
+# Update 10.11.2020
+The data seem to show a decline now that might be the result of the "lockdown light" that was decided two weeks ago. 
+However, only one or two datapoints are leaving the current trend so it is a bit too early to decide whether or not 
+the transmission rate of the virus has to be adjusted due to the changed behaviour of the population. The next week 
+will provide more data.
+
+
+<p align="center">
+  <img src="./figure_1b.png" width="500">
+</p>
+

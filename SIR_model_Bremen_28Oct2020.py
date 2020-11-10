@@ -64,7 +64,7 @@ rho= 0.04 # recovery rate for infected individuals
 sigma= 0.0 # rate of recovered individuals that become susceptible for reinfection
 
 # initialization
-tmax=30 # change duration of simulation to switch between parameter adjustment on the timescale of available data and future predictions for an entire year
+tmax=40 # change duration of simulation to switch between parameter adjustment on the timescale of available data and future predictions for an entire year
 #tmax=365
 dt=1.0
 
@@ -211,6 +211,23 @@ plt.plot(trange,D,'c',label='dead')
 #plt.xlabel('days after 10th of October 2020')
 plt.ylabel('number of people')
 plt.title('Covid Model for Bremen plus surrounding (assuming 0% unreported cases)')
+plt.legend(loc=2)
+
+
+plt.figure(2)
+#plt.plot(time,I,'g',label='active Infections') # 
+#plt.plot(time,I*0.16,'b',label='Hospitalized') # 16% der Infizierten entwickeln eine Pneumonie, Quelle RKI
+#plt.plot(time,I*0.02,'r',label='Pneumonia') # 2% der Infizierten entwickeln eine Pneumonie, Quelle RKI
+
+plt.plot(time,I*0.16,'b',label='Hospitalized') # 22% der Infizierten in Bremen sind derzeit hospitalisiert
+plt.plot(time,I*0.02,'r',label='Pneumonia') # 12% der Infizierten in Bremen werden derzeit beatmet
+#plt.plot(timeax_beds,Betten_normal[:,0],'go',label='normal beds available')
+#plt.plot(timeax_beds,Betten_normal[:,1],'bo',label='normal beds used')
+#plt.plot(timeax_beds,Betten_beatmet[:,0],'gx',label='ventilated beds available')
+#plt.plot(timeax_beds,Betten_beatmet[:,1],'ro',label='ventilated beds used')
+plt.xlabel('days after 11th of March')
+plt.ylabel('number of people')
+plt.title('Hospitalized cases')
 plt.legend(loc=2)
 
 
